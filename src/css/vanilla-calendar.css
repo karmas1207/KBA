@@ -112,8 +112,10 @@
 
 .vanilla-calendar .vanilla-calendar-date--hover {
     cursor: pointer;
-    background-color: #415A77;
+    background-color: var(--vanilla-calendar-selected-bg-color);
+    color: var(--vanilla-calendar-selected-color);
 }
+
 
 .vanilla-calendar .vanilla-calendar-date--today {
     background-color: var(--vanilla-calendar-today-bg-color);
