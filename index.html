@@ -4,25 +4,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/vanilla-calendar.css">
     <title>Kville Biljards Anställningsportal</title>
   </head>
-  <body>
+  <body onload="startTime()">
+
       <div class="top-nav">
         <a href="index.html"><img class="logo" src="logo.png" alt="Logo"></a>
         <div class="menu">
+          <a href="#nyheter"><div class="menu-icon"><i class="far fa-newspaper fa-lg"></div></i>Nyheter</a>
           <a href="#rutiner"><div class="menu-icon"><i class="fas fa-tasks fa-lg"></div></i>Rutiner</a>
           <a href="#kontaktuppgifter"><div class="menu-icon"><i class="far fa-address-book fa-lg"></i></div>Kontaktuppgifter</a>
           <a href="http://www.personalkollen.se" target="_blank"><div class="menu-icon"><i class="far fa-clock fa-lg"></i></div>Personalkollen</a>
         </div>
-        <a class="user" href="#"><i class="fas fa-user-circle fa-lg"></i></a>
+        <div class="userandclock">
+          <div class="clock" id="txt"></div>
+          <a class="user" href="#"><i class="fas fa-user-circle fa-lg"></i></a>
+      </div>
       </div>
       <div class="content">
         <div class="index-content">
-        <div class="index-content-header" id="nyheter">
-          NYHETER
-        </div>
-        <div class="index-content-text">
-          <button class="accordion">Aktuellt</button>
+          <div class="index-content-header" id="nyheter">
+            NYHETER
+          </div>
+          <div class="index-content-text">
+            <button class="accordion">Aktuellt</button>
             <div class="panel">
               <p>Historia kring Kville Biljard
                   <br>- Shari koncept & affärsidé, byggår, placering
@@ -37,75 +43,25 @@
                   <br>- Olika nöjesområden: arkad, loungebar, casino, vegas
                   <br>- Aktiviteter: quiz, karaoke, aw-buffé </p>
             </div>
-          <button class="accordion">Planerat</button>
+            <button class="accordion">Planerat</button>
               <div class="panel">
-                <div class="month">
-                  <ul>
-                    <li class="prev">&#10094;</li>
-                    <li class="next">&#10095;</li>
-                    <li>Augusti<br><span style="font-size:1em">2021</span></li>
-                  </ul>
-                </div>
 
-                <ul class="weekdays">
-                  <li>Mo</li>
-                  <li>Tu</li>
-                  <li>We</li>
-                  <li>Th</li>
-                  <li>Fr</li>
-                  <li>Sa</li>
-                  <li>Su</li>
-                </ul>
-
-                <ul class="days">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                  <li>6</li>
-                  <li>7</li>
-                  <li>8</li>
-                  <li>9</li>
-                  <li><span class="active">10</span></li>
-                  <li>11</li>
-                  <li>12</li>
-                  <li>13</li>
-                  <li>14</li>
-                  <li>15</li>
-                  <li>16</li>
-                  <li>17</li>
-                  <li>18</li>
-                  <li>19</li>
-                  <li>20</li>
-                  <li>21</li>
-                  <li>22</li>
-                  <li>23</li>
-                  <li>24</li>
-                  <li>25</li>
-                  <li>26</li>
-                  <li>27</li>
-                  <li>28</li>
-                  <li>29</li>
-                  <li>30</li>
-                  <li>31</li>
-                </ul>
               </div>
-        </div>
-        <div class="index-content-header" id="rutiner">
+          </div>
+          <div class="index-content-header" id="rutiner">
           RUTINER
         </div>
-        <div class="index-content-text">
+          <div class="index-content-text">
           <button class="accordion">Detta är vi</button>
             <div class="panel">
-              <p>Historia kring Kville Biljard
+              <p><h1>Historia kring Kville Biljard</h1>
                   <br>- Shari koncept & affärsidé, byggår, placering
                   <br>- Flytten 2001
                   <br>- Renovering 2007
                   <br>- Renovering 2021
                   <br>- Tankar kring framtiden, koncept
                   <br>
-                  <br>Övrig info
+                  <br><h1>Övrig info</h1>
                   <br>- Antal biljardbord/snooker/shuffleboard
                   <br>- Storlek lokal
                   <br>- Olika nöjesområden: arkad, loungebar, casino, vegas
@@ -113,7 +69,7 @@
             </div>
           <button class="accordion">Beskrivning över lokal</button>
               <div class="panel">
-                <p>Sektioner med grundläggande info om arbetsområdet (ansvar, rutin, ytgränser)
+                <p><h1>Sektioner med grundläggande info om arbetsområdet (ansvar, rutin, ytgränser)</h1>
                   <br>- Garderob
                   <br>- Servering
                   <br>- Bar
@@ -122,23 +78,23 @@
                   <br>- Lounge
                   <br>
                   <br>
-                  <br>Nödutgångar
+                  <br><h1>Nödutgångar</h1>
                   <br>- Att veta vid nödsituationer
                   <br>- Placeringar dörrar
                   <br>- Placering brandsläckare
                   <br>- Placering gas
                   <br>
-                  <br>Belysning
+                  <br><h1>Belysning</h1>
                   <br>- Viktiga att tända/släcka vid öppning/stängning, placering med bilder?
                   <br>- Belysning dag/kväll (ljuslyktor bord, biljardbord vip, servering)</p>
               </div>
           <button class="accordion">Kassahantering</button>
                 <div class="panel">
-                  <p>Dagskassa
+                  <p><h1>Dagskassa</h1>
                     <br>- Skilja på kassa bar dag/bar 1/plånbok
                     <br>- Guide med bilder till rätt räknesätt för både kontrollräkning och efter stängning
                     <br>
-                    <br>Trivec
+                    <br><h1>Trivec</h1>
                     <br>- Sidor att arbeta utifrån arbetssektioner (bar, biljardkassa, servis, garderob)
                     <br>- Vad man gör vid presentkortsbetalning, felslag, retur till gäst, dela upp nota, nekat kort, springnota osv
                     <br>- Tekniska problem vs lösningar. Starta om kassaskärm, starta om dino, osv
@@ -146,33 +102,33 @@
                 </div>
           <button class="accordion">Rutiner sorterat efter arbetsområden</button>
                   <div class="panel">
-                    <p>Dagliga rutiner
+                    <p><h1>Dagliga rutiner</h1>
                       <br>- Veckodagsbaserat utifrån arbetsområde, krav på att det ska göras, arbetssätt från start till slutet av pass, vad man prioriterar om tiden inte räcker till
                       <br>- Rutiner som görs månadsvis/årsvis
                       <br>- Vem gör vad? Tydliga ansvarsområden men fortsatt samarbete mellan personal vid behov
                       <br>
-                      <br>Övergripande rutiner
+                      <br><h1>Övergripande rutiner</h1>
                       <br>- Öppning veckodag/helgdag
                       <br>- Stängning veckodag/helgdag
                       <br>- Preppa för kväll/öppning dagen efter</p>
                   </div>
           <button class="accordion">Gästbemötande/ansvar</button>
                       <div class="panel">
-                        <p>Gästens upplevelse
+                        <p><h1>Gästens upplevelse</h1>
                           <br>- Bemötande vid dörr: välkomna, placera, servera
                           <br>- Uppvaktande: uppmärksamhet gentemot gäst, hålla övergripande kontakt med hela serveringen
                           <br>- Avsluta middagen: skicka vidare till aktivitet? förklara processen från betalning till uthyrning av biljardbollar/shuffle etc.
                           <br>
-                          <br>Rekommendationer/försäljning
+                          <br><h1>Rekommendationer/försäljning</h1>
                           <br>- Att kunna menyn/veta vad som smakar vad och därmed föreslå för gästen efter dens tycke
                           <br>- Merförsälja; tex dipp vid burgare, fler smårätter, trycka på god efterrätt om gästen tex börjar med huvudrätt
                           <br>
-                          <br>Missnöjd gäst
+                          <br><h1>Missnöjd gäst</h1>
                           <br>- Vad gör man om gäst är missnöjd? Delvis frihet under ansvar men de flesta fall se över situationen med ansvarig på plats - ge exempel och underlag
                           <br>- Kompensation - att hålla koll på alkohollagen, lämplig procentsats rabatt efter bekräftelse av ansvarig, beteende & jargong från personal
                           <br>
                           <br>
-                          <br>Berusad gäst
+                          <br><h1>Berusad gäst</h1>
                           <br>- Hur avgör man att gäst druckit för mycket? Hänvisa till Houmans utbildning/sammanfatta utbildningsdagarna
                           <br>- Att neka gäst, att inte överservera osv
                         </p>
@@ -187,31 +143,31 @@
                         </div>
           <button class="accordion">Resurser</button>
                           <div class="panel">
-                            <p>Meny- och dryckesguide
+                            <p><h1>Meny- och dryckesguide</h1>
                               <br>- Krav på att personal ska kunna menyn (främst mat), vad rätterna innehåller, allergener & ingredienser
                               <br>-  Att ta hänsyn och fråga gäster om allergier eller andra dietära situationer
                               <br>
-                              <br>Prislista aktiviteter
+                              <br><h1>Prislista aktiviteter</h1>
                               <br>- Priset per aktivitet
                               <br>- Att hålla koll på olika priser utifrån tider vs. medlem/icke-medlem
                               <br>
-                              <br>Bokningar
+                              <br><h1>Bokningar</h1>
                               <br>- Hur man för in bokning i kalendern/häftet: krav på bokningens namn, antal pers, tid, vad sällskapets huvudaktivitet är, telefonnummer samt slutligen signering av personal som tagit emot
                               <br>- Veta hur man styr sällskap i rätt riktning, tex mycket vid viss tid, rikta om gästen att boka vid senare tid?
                               <br>- Veta vad man får/inte får ta bokning på
                               <br>
-                              <br>Personalkollen
+                              <br><h1>Personalkollen</h1>
                               <br>- Snabb guide, schemat röd/grönmarkering
                               <br>
-                              <br>Telefonlista
+                              <br><h1>Telefonlista</h1>
                               <br>- Viktiga nummer både personal/leverantörer i pärm
                               <br>- Sekretess, inte ge ut nummer osv.</p>
                           </div>
         </div>
-        <div class="index-content-header" id="kontaktuppgifter">
+          <div class="index-content-header" id="kontaktuppgifter">
           KONTAKTUPPGIFTER
         </div>
-        <div class="index-content-text">
+          <div class="index-content-text">
           <button class="accordion">Personal</button>
             <div class="panel">
               <p>Historia kring Kville Biljard
@@ -289,59 +245,20 @@
                   </div>
         </div>
         </div>
-        <div class="sidebar"><div class="month">
-          <ul>
-            <li class="prev">&#10094;</li>
-            <li class="next">&#10095;</li>
-            <li>Augusti<br><span style="font-size:1em">2021</span></li>
-          </ul>
-          </div>
-
-          <ul class="weekdays">
-            <li>Mo</li>
-            <li>Tu</li>
-            <li>We</li>
-            <li>Th</li>
-            <li>Fr</li>
-            <li>Sa</li>
-            <li>Su</li>
-          </ul>
-
-          <ul class="days">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li><span class="active">10</span></li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-          </ul></div>
+        <div class="sidebar">
+          <div id="myCalendar" class="vanilla-calendar"></div>
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FKvilleBiljard%2F&tabs=timeline&width=400&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="400" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+          </iframe>
+        </div>
       </div>
-      <div class="footer">Kville Biljards Anställningsportal © 2021 - Alla rättigheter reserverade<i class="fas fa-phone-square fa-lg"></i>  031-654334 <i class="fas fa-map-marker-alt fa-lg"></i>  Kvilletorget 2 - 41704 Göteborg <i class="fas fa-envelope-square fa-lg"></i>  Info@kvillebiljard.com<i class="far fa-smile fa-lg"></i>  Tyck till!</div>
+      <div class="footer">
+        Kville Biljards Anställningsportal © 2021 - Alla rättigheter reserverade
+        <i class="fas fa-map-marker-alt fa-lg"></i>   Kvilletorget 2 - 41704 Göteborg
+        <i class="fas fa-phone-square fa-lg"></i>   031-654334
+        <i class="fas fa-envelope-square fa-lg"></i>   Info@kvillebiljard.com
+        <i class="far fa-smile fa-lg"></i>   Tyck till!
+      </div>
+    <script src="src/js/vanilla-calendar-min.js"></script>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/5c8fdf296c.js" crossorigin="anonymous"></script>
   </body>

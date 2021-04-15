@@ -176,7 +176,9 @@ b {
   background-color: #eee;
   color: #166088;
   cursor: pointer;
-  padding: 18px;
+  padding-left: 18px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   width: 100%;
   border: none;
   text-align: left;
@@ -187,6 +189,7 @@ b {
 
 .active, .accordion:hover {
   background-color: #ccc;
+  border-radius: 5px;
 }
 
 .accordion:after {
@@ -208,8 +211,14 @@ b {
   transition: max-height 0.2s ease-out;
 }
 
+.panel h1 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
 .top-nav {
-  background-color: #415a77;
+  background-color: #1B263B;
   box-shadow: 15px rgba(0,0,0,0.2);
   font-family: 'Source Sans Pro', sans-serif;
   height: 80px;
@@ -364,7 +373,7 @@ ul {list-style-type: none;}
 }
 
 .footer {
-  background: #415a77;
+  background: #1B263B;
   width: 100%;
   height: 33px;
   z-index: 2;
@@ -377,6 +386,7 @@ ul {list-style-type: none;}
 
 .footer i {
   padding-left: 25px;
+  padding-right: 5px;
 }
 
 .sidebar {
@@ -390,4 +400,20 @@ ul {list-style-type: none;}
 
 .content {
   display: flex;
+}
+
+.clock {
+  font-size: 1.5em;
+  display: block;
+  float: left;
+  margin-top: 25px;
+  margin-right: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #f2f2f2;
+}
+
+.userandclock {
+  display: inline-block;
+  float: right;
 }
