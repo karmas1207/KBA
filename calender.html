@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/vanilla-calendar.css">
+    <title>Kville Biljards Anställningsportal</title>
+  </head>
+  <body onload="startTime()">
+      <div class="top-nav">
+        <a href="index.html"><img class="logo" src="logo.png" alt="Logo"></a>
+        <div class="menu">
+          <a href="index.html#nyheter"><div class="menu-icon"><i class="far fa-newspaper fa-lg"></div></i>Nyheter</a>
+          <a href="index.html#rutiner"><div class="menu-icon"><i class="fas fa-tasks fa-lg"></div></i>Rutiner</a>
+          <a href="index.html#kontaktuppgifter"><div class="menu-icon"><i class="far fa-address-book fa-lg"></i></div>Kontaktuppgifter</a>
+          <a href="calender.html"><div class="menu-icon"><i class="far fa-calendar-alt fa-lg"></div></i>Kalender</a>
+          <a href="http://www.personalkollen.se" target="_blank"><div class="menu-icon"><i class="far fa-clock fa-lg"></i></div>Personalkollen</a>
+        </div>
+        <div class="userandclock">
+          <div class="clock" id="txt"></div>
+          <a class="user" href="#"><i class="fas fa-user-circle fa-lg"></i></a>
+      </div>
+      </div>
+      <div class="content">
+        <div class="index-content">
+          <iframe class="calender-frame" src="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/228e2f53-42e1-48dd-b923-166cc7973fb2/cid-AF0E0738D2B9132C/index.html"></iframe>
+        </div>
+        <div class="sidebar">
+          <div id="myCalendar" class="vanilla-calendar"></div>
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FKvilleBiljard%2F&tabs=timeline&width=400&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="400" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+          </iframe>
+        </div>
+      </div>
+      <div class="footer">
+        Kville Biljards Anställningsportal © 2021 - Alla rättigheter reserverade
+        <i class="fas fa-map-marker-alt fa-lg"></i>   Kvilletorget 2 - 41704 Göteborg
+        <i class="fas fa-phone-square fa-lg"></i>   031-654334
+        <i class="fas fa-envelope-square fa-lg"></i>   Info@kvillebiljard.com
+        <i class="far fa-smile fa-lg"></i>   Tyck till!
+      </div>
+    <script src="src/js/vanilla-calendar-min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/5c8fdf296c.js" crossorigin="anonymous"></script>
+  </body>
+</html>
